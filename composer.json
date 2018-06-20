@@ -1,0 +1,20 @@
+{
+    "name": "laszlof/pkgsrch",
+    "description": "API for searching/listing/getting RPM packages",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Laszlo",
+            "email": "frank@franksworld.org"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "Pkgsrch\\": "src/Pkgsrch/"
+      }
+    }
+}

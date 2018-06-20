@@ -1,0 +1,10 @@
+{
+  "version": "0.1",
+  "repos": {
+    "centos": {
+      "v7": {
+        "primary": "03d0a660eb33174331aee3e077e11d4c017412d761b7f2eaa8555e7898e701e0-primary.sqlite"
+      }
+    }
+  }
+}
