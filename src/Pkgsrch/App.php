@@ -28,14 +28,6 @@ class App {
   protected static $_config = [];
 
   /**
-   * List of Repos
-   * @var array
-   */
-  const REPOS = [
-    \Pkgsrch\Repos\Centos\V7\Primary::class
-  ];
-
-  /**
    * Construct app
    *
    * @param SlimApp $slim
@@ -60,7 +52,7 @@ class App {
    */
   public static function config() : array {
     if (empty (self::$_config)) {
-      $cfg = self::getBaseDir() . '/config/config.json';
+      $cfg = self::getConfigFilePath();
       if (! file_exists($cfg)) {
         throw new Exception('Config file not found');
       }
@@ -78,6 +70,15 @@ class App {
    */
   public static function getBaseDir() : string {
     return realpath(__DIR__ . '/../../');
+  }
+
+  /**
+   * Get config file path
+   *
+   * @return string
+   */
+  public static function getConfigFilePath() : string {
+    return self::getBaseDir() . '/config/config.json';
   }
 
   /**
@@ -99,6 +100,5 @@ class App {
         }
       }
     }
-
   }
 }
